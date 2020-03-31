@@ -15,8 +15,8 @@ namespace MaxPairWise
             ulong n = ulong.Parse(inputs[0]);
             ulong m = ulong.Parse(inputs[1]);
             int[] f = PisanoPeriod();
-            n = (n+1) % 60;
-            m = (m+2) % 60;
+            n = (n + 1) % 60;
+            m = (m + 2) % 60;
             int to = f[m] - 1;
             int from = f[n] - 1;
             if (to == 0 && from == 0)

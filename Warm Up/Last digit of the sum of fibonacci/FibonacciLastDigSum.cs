@@ -13,8 +13,10 @@ namespace MaxPairWise
         {
             ulong n = ulong.Parse(Console.ReadLine());
             int[] pisano = PisanoPeriod();
-            n = (n % 60 > 0) ? n % 60 : 0;
-            Console.WriteLine(pisano[n+2]-1);
+            n = (n+2) % 60 
+            int result = pisano[n]-1;
+            if (pisano[n] - 1 < 0) result = 9;
+            Console.WriteLine(result);
             Console.ReadKey();
         }
 
@@ -26,7 +28,7 @@ namespace MaxPairWise
             fibonacci[1] = 1;
             for (int i = 2; i < fibonacci.Length; i++)
             {
-                    fibonacci[i] = (fibonacci[i - 1] + fibonacci[i - 2])%10;
+                fibonacci[i] = (fibonacci[i - 1] + fibonacci[i - 2]) % 10;
             }
             return fibonacci;
         }
