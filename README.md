@@ -1,1 +1,1 @@
-Algorithms
+These are coding challenges designed to be completed with certain algoritmic approach, so that developer can learn from it.
